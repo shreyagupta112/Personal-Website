@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Gupta - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS styles */
+        .hidden-content {
+            display: none;
+        }
+    </style>
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Shreya Gupta</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Work Experience</a></li>
+                <li><a href="#projects">Technical Projects</a></li>
+                <li><a href="#research">Research Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <picture>
+                <!-- Source with media query for smaller screens -->
+                <source srcset="your-photo-mobile.jpg" media="(max-width: 768px)">
+                <!-- Default image for larger screens -->
+                
+                    <img src="headshot.jpg" alt="A Picture of Me!" >
+                    
+                  
+            </picture>
+            <p>Hello! I'm an undergraduate at UCSD stuyding Math and Computer Science. Here is the work I've done in the past few years.</p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Software Engineering Internship</h3>
+                <p>The Qualcomm Institute</p>
+                <p>Duration: 06/2023 - 08/2023</p>
+                <p>Built deep learning model in PyTorch using HRTFs to estimate anthropometrics, enhancing spatial audio models.</p>
+            </div>
+            <!-- Add more experience items as needed -->
+        </section>
+
+        <!-- Technical Projects Section -->
+        <section id="projects">
+            <h2>Technical Projects</h2>
+            <div class="project-item">
+                <h3>Harry Potter Fortune Telling Application</h3>
+                <p>Led a team of 8 members in an Agile environment in the development of a Harry Potter-themed application.
+                Developed front-end code for 10+ interactive pages, using HTML/CSS/JavaScript.Utilized OpenAI API endpoints to generate detailed, personalized fortunes based on user’s Hogwarts house.</p>
+                <a href="https://github.com/the132Debuggers/cse110-sp23-the132Debuggers" target="_blank">Link to Project</a>
+                <h4>Skills:</h4>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <!-- Add more project items as needed -->
+        </section>
+
+        <!-- Research Projects Section -->
+        <section id="research">
+            <h2>Research Projects</h2>
+        
+            <!-- Dropdown for Research Project 1 -->
+            <details>
+                <summary>Developing	a Data-Driven Many-Body	Model for	Triplet	Oxygen	Hydration	with	Chemical
+                    Accuracy</summary>
+                <p>Omkaar	Kulkarni*,	Shreya	Gupta*,	Etienne	Palos,	Ethan	Bull-Vulpe,	Francesco	Paesani</p>
+                <p>Due	to	the	central	role	that	oxygen	plays	in	a	myriad	of	natural	and	industrial	processes,	developing	a
+                    physics-based	model	that	accurately	describes	oxygen–water	interactions,	from	the	gas	to	the	
+                    condensed	phase,	will	deepen	our	understanding	of	important	aerobic	phenomena	and	assist	in	
+                    tackling	related	challenges	such	as	O	2	transport	through	biological	media.	To	this	end,	the	manybody	energy	(MB-nrg)	formalism	has	been	developed	over	the	last	decade	as	a	data-driven	manybody	framework	that	combines	the	ansatz	of	the	many-body	expansion	with	high-level	electronic	
+                    structure	theory	for	robust	simulations	of molecular	simulations.	Due	to	the	functional	form	of	MBnrg	PEFs,	which	is	systematically	improvable,	they	have	been	demonstrated	to	be	transferable	across	
+                    phases,	maintaining	chemical	accuracy	from	the	dimer	to	the	condensed	phase.	Importantly,	it	
+                    enables	the	descriptions	of	molecular	systems	at	arbitrary	ab initio	accuracy	with	the	computational	
+                    cost	of	a	polarizable	force	field.	MB-nrg	has	been	used	to	model	molecular	mixtures	in	water,	like	CO2	
+                    /H2O	and	CH4/H2O,	accurately	reproducing	reference	CCSD(T) energies	and	structural	and	chemical
+                    properties	of	the	mixtures2,3.	Now,	we	use	the	MB-nrg	framework	to	gain	molecular	insights	into	the
+                    hydration	of	3O2.
+                    Within	the	MB-nrg	formalism,	we	derived	many-body	PEFs	for	3	O	2	(V	1B	)	and	3	O	2	-H	2	O	(V	2B	)
+                    from domain-based	local	pair	natural	orbital	unrestricted	coupled-cluster	theory,	DLPNO-UCCSD(T),	
+                    in combination	with	the	F12	method	to	approximately	extrapolate	to	the	complete	basis	set.	As
+                    DLPNO-UCCSD(T)-F12	is	more	efficient	than	the	canonical	treatment,	it	facilitates	training	the	MB-nrg
+                    PEF	on	more	extensive	training	sets	without	significant	overhead.	4	Many-body	energy	decomposition
+                    analyses	of	3	O	2	(H	2	O)	N	clusters	suggest	that	low-order	many-body	interactions	(e.g.	2-body	and	3
+                    body)	are sufficient	to	describe	the	interaction	energy	of	hydrated	water	clusters,	and	that	2-body	
+                    interactions may play	a	deterministic	role	in	characterizing	the	local	hydration	structure	of	dissolved	
+                    oxygen.</p>
+            </details>
+    
+        
+            <!-- Add more dropdowns for additional research projects as needed -->
+        
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="/submit_form" method="post">
+        
+                <!-- Fieldset with Legend for Grouping Form Elements -->
+                <fieldset>
+                    <legend>Your Information</legend>
+        
+                    <!-- Name Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+        
+                    <!-- Email Input -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                </fieldset>
+        
+                <!-- Message Textarea -->
+                <fieldset>
+                    <legend>Your Message</legend>
+        
+                    <!-- Message Input -->
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                </fieldset>
+        
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <a href="experiments.html">Ocean Stuff!</a>
+
+        <aside class="social-media-links">
+            <h2>Social Media</h2>
+            <a href="https://www.linkedin.com/in/shreya--gupta/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/shreyagupta112" target="_blank">GitHub</a>
+            <!-- Add more social media links as needed -->
+        </aside>
+
+        <!-- Hidden Content for Styling or JavaScript Manipulation -->
+        <span class="hidden-content">Hidden Content</span>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Shreya Gupta. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

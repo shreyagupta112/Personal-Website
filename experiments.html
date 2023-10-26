@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ocean</title>
+</head>
+
+<body>
+    <h1>The Ocean</h1>
+
+    <section>
+        <h2>Exploring the Depths</h2>
+        <p>The ocean covers more than <strong>70%</strong> of the Earth's surface. 
+            The ocean is home to a diverse range of marine life, from <i>small</i> to <b>big</b>.
+            </p>
+
+            <hr>
+            <p> I <em>love</em> our oceans.</p> I also love coding. <br> <code>
+                while (alive) { <br> eat(); <br> sleep (); <br> code (); <br> }</code>
+
+    </section>
+
+
+  <section>
+    <h2>Best Marine Animals</h2>
+        <ol>
+            <li>Giant Squid</li>
+            <li>Big White Shark</li>
+            <li>Whale Shark</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2> Pictures </h2>
+        <canvas id="waveCanvas" width="400" height="200"></canvas>
+        <svg viewbox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='30vmin' width='30vmin'>
+            <rect x='0' y='0' width='50%' height='50%' fill='green' />
+        </svg>
+    </section>
+      
+
+    <script>
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        
+        function drawCircle() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'green';
+            ctx.stroke();
+        }
+
+        drawCircle();
+    </script>
+    
+    
+    <section>
+        <h2>Audio and Video</h2>
+        <audio controls>
+            <source src="ocean-wave-1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <video width="320" height="240" controls>
+            <source src="sea.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+
+        <figure>
+            <img src="headshot.jpg" alt="A Picture of Me!">
+            <figcaption>A Picture of Me!</figcaption>
+          </figure>
+
+        <h2>Watch Ocean Documentary</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EF8C4v7JIbA" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
+    <section>
+        <h2>Ocean Facts Table</h2>
+        <table>
+            <caption>Ocean Facts</caption>
+            <colgroup>
+                <col >
+                <col span="2" class="ocean-depth" >
+                <col span="2" class="ocean-temperature" >
+            </colgroup>
+            <tr>
+                <td></td>
+                <th scope="col">Depth</th>
+                <th scope="col">Pressure</th>
+                <th scope="col">Temperature</th>
+                <th scope="col">Salinity</th>
+            </tr>
+            <tr>
+                <th scope="row">Measurement</th>
+                <td>Deepest point: Mariana Trench</td>
+                <td>Extreme pressure conditions</td>
+                <td>Average: 39°F (3.8°C)</td>
+                <td>Varies in different regions</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Choose an Ocean Fact</h2>
+        <label for="ocean-facts">Select an Ocean Fact:</label>
+        <input list="facts" id="ocean-facts" name="ocean-facts" placeholder="Choose an ocean fact...">
+        <datalist id="facts">
+            <option value="Deepest Point: Mariana Trench">
+            <option value="Average Ocean Temperature: 39°F (3.8°C)">
+            <option value="Marine Biodiversity: Rich coral reefs and diverse marine life">
+        </datalist>
+    </section> 
+
+
+    <section>
+        <h2>Explore Ocean Features</h2>
+        <label for="ocean-features">Select an Ocean Feature:</label>
+        <select id="ocean-features" name="ocean-features">
+            <optgroup label="Ocean Life">
+                <option value="Coral Reefs">Coral Reefs</option>
+                <option value="Whales">Whales</option>
+            </optgroup>
+            <optgroup label="Ocean Phenomena">
+                <option value="Tides">Tides</option>
+                <option value="Ocean Currents">Ocean Currents</option>
+            </optgroup>
+        </select>
+    </section>
+    
+
+    <hr>
+
+    <template id="template">
+        <div>
+            <h2>template tag</h2>
+            <p>Add dynamic content here.</p>
+        </div>
+    </template>
+
+    <section>
+        <h2>Preformatted Text</h2>
+        <pre>
+        Oceanography is the study of the ocean.
+        It covers a wide range of topics,
+        including marine life, ecosystems, and ocean currents.
+        </pre>
+    </section>
+
+    <footer>
+        <p>Learn more about the ocean and its wonders!</p>
+    </footer>
+</body>
+
+</html>
