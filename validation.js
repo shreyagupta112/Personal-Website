@@ -117,7 +117,7 @@ email.addEventListener("oninput", (event) => {
 
 });
 
-/*
+
 message.addEventListener("oninput", (event) => {
 
   if (message.patternMismatch == true) {
@@ -128,7 +128,7 @@ message.addEventListener("oninput", (event) => {
     
   }
 });
-*/
+
 
 
 message.addEventListener("input", (event) => {
