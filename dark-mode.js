@@ -6,9 +6,8 @@ let darkMode = localStorage.getItem("dark-mode");
 let coolMode = localStorage.getItem("cool-mode");
 let toggleMode = localStorage.getItem("toggle-mode");
 
-console.log("here")
-
-
+document.getElementById("dark-mode-button").hidden = true;
+document.getElementById("cool-mode-button").hidden = true;
 document.getElementById("change-mode-button").hidden = false;
 
 if (darkMode === "enabled") {
