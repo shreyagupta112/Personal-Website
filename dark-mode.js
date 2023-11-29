@@ -14,8 +14,8 @@ if (darkMode === "enabled") {
 }
 
 if (toggleMode === "enabled") {
-  document.getElementById("dark-mode-button").hidden = true;
-  document.getElementById("cool-mode-button").hidden = true; 
+  document.getElementById("dark-mode-button").hidden = false;
+  document.getElementById("cool-mode-button").hidden = false; 
   localStorage.setItem("toggle-mode", "enabled");
 }
 
@@ -25,12 +25,12 @@ toggleBtn.addEventListener("click", (e) => {
   console.log("too")
   toggleMode = localStorage.getItem("toggle-mode"); 
   if (toggleMode === "disabled") {
-    document.getElementById("dark-mode-button").hidden = true;
-    document.getElementById("cool-mode-button").hidden = true; 
+    document.getElementById("dark-mode-button").hidden = false;
+    document.getElementById("cool-mode-button").hidden = false; 
     localStorage.setItem("toggle-mode", "enabled");
   } else {
-    document.getElementById("dark-mode-button").hidden = false;
-    document.getElementById("cool-mode-button").hidden = false;
+    document.getElementById("dark-mode-button").hidden = true;
+    document.getElementById("cool-mode-button").hidden = true;
     localStorage.setItem("toggle-mode", "disabled"); 
   }
   
