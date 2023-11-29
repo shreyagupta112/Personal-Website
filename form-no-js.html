@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreya Gupta - Portfolio</title>
     <link rel="stylesheet" href="styles.css" media="screen" type="text/css">
-    <script async type="module" src="validation.js"></script>
-    <script async type="module" src="dark-mode.js"></script>
+    <script>history.scrollRestoration = "manual"</script>
+    <script src="javascript.js"></script>
+    <style>
+        input:user-invalid , textarea:user-invalid  {
+            border: 2px solid var(--red, #ba3922);
+        }
+    </style>
 
 </head>
 
-<body id="theme">
+<body>
 
     <!-- Header Section -->
     <header>
@@ -19,14 +24,6 @@
             <a href="#work-experience">Work Experience</a>
             <a href="#projects">Projects/Research</a>
             <a href="#contact">Contact Me</a>
-
-
-            <ul class="drop-down">
-                <li><button id="change-mode-button" hidden>change mode</button></li>
-                <li><button id="dark-mode-button" hidden>dark mode</button></li>
-                <li><button id="cool-mode-button" hidden>cool mode</button></li>
-              </ul>
-            
         
         </nav>
     </header>
@@ -43,8 +40,8 @@
                 </p>
             </div>
             <picture>
-                <source srcset="headshot.png" media="(orientation: portrait)" />
-                <img src="headshot.png" alt="A Picture of Me!" >
+                <source srcset="headshot.jpg" media="(orientation: portrait)" />
+                <img src="headshot.jpg" alt="A Picture of Me!" >
             </picture>
             <a href="#work-experience" class="forward-button">Learn More</a>
         </section>
@@ -164,8 +161,8 @@
                     </fieldset>
                     <fieldset class="message-input">
                         <label for="message">Message</label> 
-                        <textarea id="message" name="message" maxlength="400" rows="4" cols="50" required></textarea>
-                        <output id="informationMessage" for="message">Characters remaining: 400</output>
+                        <input id="message" name="message" maxlength="400" rows="4" cols="50" pattern="[a-zA-Z0-9 !@#$%^&*\/.,<>]+" required></input>
+                        <output id="informationMessage" for="message">Max Characters: 400</output>
                         <output id="messageError" class="error-ms" for="message"></output>
                         
                     </fieldset>

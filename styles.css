@@ -38,6 +38,17 @@ body {
     background-color: var(--background, #EAE7DC);
   }
 
+  .dark-mode-theme {
+    --background: #2f2f2d;
+    --white: #000000;
+    --red: #E85A4F;
+    --light-red: #E98074;
+    --lighter-red: #c2544c;
+    --dark-grey: #ffffff;
+    --grey: #8E8D8A;
+    --black: #ffffff;
+
+  }
   /* general styles */ 
   
   h1 {
@@ -112,7 +123,6 @@ body {
   /* Nav Bar */
   nav {
     justify-content: right;
-    align-items:center;
     display: flex;
     height: var(--nav-height, 3rem)
 
@@ -124,6 +134,26 @@ body {
     margin: 2rem 1rem 2rem 0rem;
 
   }
+
+  .drop-down{
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+  }
+
+  .drop-down > li{
+    list-style-type: none;
+    margin: 1rem;
+    width: 8em;
+  }
+
+  
+  
+  #dark-mode-button, #cool-mode-button {
+    padding-right: .75em;
+    padding-left: .75em;
+  }
+
+ 
 
     /* About Me Section */
   #about-me {
@@ -181,7 +211,7 @@ body {
   }
 
   .forward-button {
-    color: var(--white, #ffffff);
+    color: var(--black, #000000);
     margin: 0 auto;
     font-style: bold;
     grid-column-start: 2;
@@ -251,7 +281,7 @@ body {
   text-decoration: remove;
   padding: 0;
   margin:0;
-  color:white;
+  color:var(--white);
 
 }
 
@@ -276,7 +306,7 @@ fieldset {
 input,
 textarea {
   border: 2px solid var(--dark-grey, #5B5A57);
-  background-color: color-mix(in srgb, white 50%, var(--lighter-red, red));
+  background-color: color-mix(in srgb, var(--white) 50%, var(--lighter-red, red));
   border-radius: 0.25rem;
   font: 1.25rem / 1.5 sans-serif;
   display: block;
@@ -311,9 +341,22 @@ form {
    
 }
 
+.error-ms {
+  animation: idMessageError2 2s forwards;
+  -webkit-animation: idMessageError2 2s forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+@keyframes idMessageError2 {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+
 
 button {
-  max-width: 5em;
+  max-width: 8em;
   text-align: center;
   justify-content: center;
   align-items: center;
