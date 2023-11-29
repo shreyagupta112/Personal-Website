@@ -151,7 +151,7 @@
                 <fieldset class="contact-form">
                     <fieldset>
                         <label for="name">Name</label> <br>
-                        <input type="text" id="name" name="name" pattern="[a-zA-Z ]+" required>
+                        <input type="text" id="name" name="name" pattern="[a-zA-Z ]+" required autofocus>
                         <output for="name"></output>
                         <output id='nameError' class="error-ms" for="name"></output>
                     </fieldset>
@@ -164,8 +164,8 @@
                     </fieldset>
                     <fieldset class="message-input">
                         <label for="message">Message</label> 
-                        <textarea id="message" name="message" maxlength="400" rows="4" cols="50" required></textarea>
-                        <output id="informationMessage" for="message">Characters remaining: 400</output>
+                        <textarea id="message" name="message" maxlength="400" rows="4" cols="50" pattern="[a-zA-Z0-9 !@#$%^&*\/.,]+" required></textarea>
+                        <output id="informationMessage" for="message">Max Characters: 400</output>
                         <output id="messageError" class="error-ms" for="message"></output>
                         
                     </fieldset>

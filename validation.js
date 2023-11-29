@@ -13,13 +13,14 @@ let form = document.getElementById('form');
 
 
 function updateCharacterCount() {
-  let maxCharacters = 400;
-  let warningThreshold = 30; // Adjust this threshold as needed
-  let errorThreshold = 10; // Adjust this threshold as needed
+  // Adjust this threshold as needed
+  const maxCharacters = 400;
+  const warningThreshold = 30;
+  const errorThreshold = 10;
   let remainingCharacters = maxCharacters - message.value.length;
+  console.log(remainingCharacters);
   infoMessage.textContent = `Characters remaining: ${remainingCharacters}`;
 
-  // Adjust styling based on character count
   if (remainingCharacters <= errorThreshold) {
     infoMessage.style.color = 'red';
     message.style.borderColor = 'red';
@@ -27,7 +28,6 @@ function updateCharacterCount() {
     infoMessage.style.color = 'orange';
     message.style.borderColor = 'orange';
   } else {
-    // Reset styles if within acceptable range
     infoMessage.style.color = '';
     message.style.borderColor = '';
   }
@@ -95,11 +95,12 @@ function submitFormErrorsToServer() {
 
 let most_characters = /^[a-zA-Z0-9!@#$&()-`.+,/\"]*$/; //fix 
 let letters = /[a-zA-Z\s]+/;
+let other = /[a-zA-Z0-9 !@#$%^&*\/.,<> ]+/;
 
 text.addEventListener("oninput", (event) => {
   if (text.checkValidity() == false) {
-    text.setCustomValidity("Please input a valid email.");
-    pushError(text, "Invalid email");
+    text.setCustomValidity("Please input a valid name.");
+    pushError(text, "Invalid name");
   } else {
     text.setCustomValidity('');
   }
@@ -116,18 +117,28 @@ email.addEventListener("oninput", (event) => {
 
 });
 
+/*
 message.addEventListener("oninput", (event) => {
-  if (message.checkValidity() == false) {
-    message.setCustomValidity("Please input a valid email.");
-    pushError(text, "Invalid email");
+
+  if (message.patternMismatch == true) {
+    message.setCustomValidity("Please input a valid message.");
+    pushError(text, "Invalid message");
   } else {
     message.setCustomValidity('');
+    
   }
+});
+*/
+
+
+message.addEventListener("input", (event) => {
+  updateCharacterCount();
 
 });
 
+
 message.addEventListener("beforeinput", (event) => {
-  handleBeforeInput(event, message, errorMessage, most_characters);
+  handleBeforeInput(event, message, errorMessage, other);
 });
 
 email.addEventListener("beforeinput", (event) => {
