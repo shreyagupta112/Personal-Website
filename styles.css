@@ -124,21 +124,26 @@ body {
   nav {
     justify-content: right;
     display: flex;
-    height: var(--nav-height, 3rem)
+    height: var(--nav-height, 3rem);
+    padding: 2rem;
 
   }
 
   nav > a{
     color: var(--dark-grey, #5B5A57);
-    text-align: center;
-    margin: 2rem 1rem 2rem 0rem;
+    margin-top: 0rem;
+    
 
   }
 
-  .drop-down{
-    padding: 1rem 0.5rem;
-    margin: 1rem;
-    width: 8em;
+
+
+  #theme-change{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Add this line */
+    margin-top: auto;
+   
   }
   
   
