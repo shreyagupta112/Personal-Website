@@ -138,14 +138,9 @@ body {
   .drop-down{
     padding: 1rem 0.5rem;
     margin: 1rem;
-  }
-
-  .drop-down > li{
-    list-style-type: none;
-    margin: 1rem;
     width: 8em;
   }
-
+  
   
   
   #dark-mode-button, #cool-mode-button {
