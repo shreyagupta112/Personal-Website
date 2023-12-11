@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css" media="screen" type="text/css">
     <script async type="module" src="validation.js"></script>
     <script async type="module" src="dark-mode.js"></script>
+    <script async type="module" src="rating.js"></script>
+    <script async type="module" src="weather-service.js"></script>
 
 </head>
 
@@ -146,6 +148,12 @@
         <!-- Contact Me Section -->
         <section id="contact">
             <h2>Contact Me</h2>
+            <aside class="social-media-links">
+                <a href="sfgupta@ucsd.edu" target="_blank">Mail</a>
+                <a href="https://www.linkedin.com/in/shreya--gupta/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/shreyagupta112" target="_blank">GitHub</a>
+                <!-- Add more social media links as needed -->
+            </aside> 
             <form id="form" action="https://httpbin.org/post" method="post">
                 <!-- Name Input -->
                 <fieldset class="contact-form">
@@ -173,20 +181,52 @@
                 <input type="hidden" name="possible_bot" value="true">
                 <button id="form-submit" type="submit">Submit</button>
             </form>
-            <aside class="social-media-links">
-                <p>Email: sfgupta@ucsd.edu</p>
-                <a href="https://www.linkedin.com/in/shreya--gupta/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/shreyagupta112" target="_blank">GitHub</a>
-                <!-- Add more social media links as needed -->
-            </aside>
         </section>
+
+        <section id="delete-later">
+            <rating-widget class="delete-item">
+                <h2>Feedback</h2>
+                <form action="https://httpbin.org/post" method="POST" >
+                    <input type="hidden" name="question" value="How satisfied are you?">
+                    <input type="hidden" name="sentBy" value="HTML">
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating"/>
+                        <label for="star5" class="star" ></label>
+                        <input type="radio" id="star4" name="rating" />
+                        <label for="star4" class="star"></label>
+                        <input type="radio" id="star3" name="rating" />
+                        <label for="star3" class="star"></label>
+                        <input type="radio" id="star2" name="rating" />
+                        <label for="star2" class="star"></label>
+                        <input type="radio" id="star1" name="rating" />
+                        <label for="star1" class="star"></label>
+                    </div>
+                    <output for="star1">Thanks for your feedback of 1 star. We'll try to do better</output>
+                    <output for="star2">Thanks for your feedback of 2 stars. We'll try to do better</output>
+                    <output for="star3">Thanks for your feedback of 3 stars. We'll try to do better</output>
+                    <output for="star4">Thanks for a 4 star rating!</output>
+                    <output for="star5">Thanks for a 5 star rating!</output>
+                    <button id="rating-submit" type="submit">Submit</button>
+                </form>
+            </rating-widget>
+
+    
+            <weather-widget> 
+                <h2> Current Weather</h2>
+                <div id="weatherWidget">
+                    <div id="weather">
+                        <p id="weatherErrorMsg"> Current Weather Conditions Unavailable</p>
+                    </div>
+                </div>
+            </weather-widget>
+         
+    </section>
 
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Shreya Gupta. All rights reserved.</p>
-        <a href="experiments.html">Ocean Stuff!</a>
+       
     </footer>
 
 </body>
