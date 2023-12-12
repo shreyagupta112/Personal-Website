@@ -139,7 +139,9 @@ body {
     height: 1rem;
   }
  
-
+  b {
+    font-weight: 400;
+  }
   
   img {
     max-width: 100%;
@@ -412,6 +414,8 @@ button {
   margin-bottom: 5em;
 }
 
+/* Rating Widget */
+
 .rating {
   display: flex;
   flex-direction: row-reverse;
@@ -446,8 +450,8 @@ rating-widget output {
   align-items: center;
   font-size: var(--step-1, 0.7813rem);
   font-family: var(--paragraph-font);
-    font-weight: 200;
 }
+
 
 
 input[type="radio"]:hover ~ label:before, input[type="radio"]:checked ~ label:before {
@@ -469,6 +473,10 @@ rating-widget input[type="radio"]:checked + label + output {
   justify-content: center;
   align-items: center;
 }
+
+/* Rating Widget End*/
+
+/* Weather Widget */
 
 weather-widget {
   margin-top: 0;
@@ -506,12 +514,13 @@ weather-widget img {
 
 }
 
-
 #weatherErrorMsg {
   grid-column: 1 / 3;
   align-self: center;
   margin: 0;
 }
+
+/* Weather Widget end */
 
 @media (max-width: 768px), (orientation:portrait) {
   nav {

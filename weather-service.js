@@ -21,13 +21,22 @@ async function fetchWeatherData() {
 
         // Create HTML elements to display temperature, conditions, and icon
         const temperatureElement = document.createElement('p');
-        temperatureElement.textContent = `Temperature: ${weatherData.temperature} °F`;
+        const temperatureLabel = document.createElement('b');
+        temperatureLabel.textContent = 'Temperature:';
+        temperatureElement.appendChild(temperatureLabel);
+        temperatureElement.appendChild(document.createTextNode(` ${weatherData.temperature} °F`));
 
         const conditionsElement = document.createElement('p');
-        conditionsElement.textContent = `Conditions: ${weatherData.shortForecast}`;
+        const conditionsLabel = document.createElement('b');
+        conditionsLabel.textContent = 'Conditions:';
+        conditionsElement.appendChild(conditionsLabel);
+        conditionsElement.appendChild(document.createTextNode(` ${weatherData.shortForecast}`));
 
         const rainElement = document.createElement('p');
-        rainElement.textContent = `Chance of Rain: ${weatherData.probabilityOfPrecipitation.value} %`;
+        const rainLabel = document.createElement('b');
+        rainLabel.textContent = 'Chance of Rain:';
+        rainElement.appendChild(rainLabel);
+        rainElement.appendChild(document.createTextNode(` ${weatherData.probabilityOfPrecipitation.value} %`));
         
 
         const imgElement = document.createElement('img');

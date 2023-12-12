@@ -2,6 +2,7 @@ let submit = document.getElementById("rating-submit");
 let ratingForm = document.querySelector('rating-widget form');
 let ratingButtons = document.querySelectorAll('.star');
 let ratingOutputs = document.querySelectorAll('#delete-later output');
+let radioButtons2 = document.querySelectorAll('input[name="rating"]');
 
 
 
@@ -20,7 +21,7 @@ ratingButtons.forEach((button, index) => {
 
 
 
-  ratingButtons.forEach(button => {
+  ratingButtons.forEach((button, index) => {
     button.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();
         const url = "https://httpbin.org/post";
@@ -28,6 +29,7 @@ ratingButtons.forEach((button, index) => {
         // Prepare form data
         const formData = new FormData(ratingForm);
         formData.set('sentBy', 'JS');  // Use set() to ensure the value is replaced or set explicitly
+        formData.set('rating', index); 
 
         xhr.open("POST", url, true);
 
@@ -37,12 +39,18 @@ ratingButtons.forEach((button, index) => {
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 console.log(JSON.parse(xhr.responseText));
-                // ratingForm.submit();
+
+                // Loop through each radio button and set checked to false
+                radioButtons2.forEach(function(radioButton) {
+                    radioButton.checked = false;
+                });
+                ratingForm.submit();
             }
         };
 
         // Send the request
         xhr.send(formData);
+       
        
     });
 });
