@@ -481,10 +481,29 @@ rating-widget input[type="radio"]:checked + label + output {
 weather-widget {
   margin-top: 0;
   padding-top: 0;
+  display: block; /* Ensure it's a block-level element */
 }
 
-weather-widget h2 {
+weather-widget h2::slotted(h2) {
+  color: var(--red, #E85A4F);
+  font-family: var(--title-font);
+  font-size: 4rem;
+  letter-spacing: .4rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding: 1em;
+  padding-bottom: 0;
+  margin: 0;
+  text-align: center;
   padding-bottom: 1em;
+}
+
+weather-widget p::slotted(p) {
+  font-size: var(--step-1, 0.7813rem);
+  padding: 0;
+  margin: 0.5em 0em;
+  font-family: var(--paragraph-font);
+  font-weight: 200;
 }
 
 #weatherWidget {
@@ -503,15 +522,11 @@ weather-widget h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
 
 weather-widget img {
   padding: 0em 3em;
-
   padding-bottom: 1em;
-
-
 }
 
 #weatherErrorMsg {
@@ -519,7 +534,6 @@ weather-widget img {
   align-self: center;
   margin: 0;
 }
-
 /* Weather Widget end */
 
 @media (max-width: 768px), (orientation:portrait) {

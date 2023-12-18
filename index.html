@@ -184,31 +184,16 @@
         </section>
 
         <section id="delete-later">
-            <rating-widget class="delete-item">
+            <feedback-widget class="delete-item">
                 <h2>Feedback</h2>
                 <form action="https://httpbin.org/post" method="POST" >
-                    <input type="hidden" name="question" value="How satisfied are you?">
-                    <input type="hidden" name="sentBy" value="HTML">
-                    <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5"/>
-                        <label for="star5" class="star" ></label>
-                        <input type="radio" id="star4" name="rating" value="4"/>
-                        <label for="star4" class="star"></label>
-                        <input type="radio" id="star3" name="rating" value="3"/>
-                        <label for="star3" class="star"></label>
-                        <input type="radio" id="star2" name="rating" value="2"/>
-                        <label for="star2" class="star"></label>
-                        <input type="radio" id="star1" name="rating" value="1"/>
-                        <label for="star1" class="star"></label>
-                    </div>
-                    <output for="star1">Thanks for your feedback of 1 star. We'll try to do better</output>
-                    <output for="star2">Thanks for your feedback of 2 stars. We'll try to do better</output>
-                    <output for="star3">Thanks for your feedback of 3 stars. We'll try to do better</output>
-                    <output for="star4">Thanks for a 4 star rating!</output>
-                    <output for="star5">Thanks for a 5 star rating!</output>
-                    <button id="rating-submit" type="submit">Submit</button>
-                </form>
-            </rating-widget>
+                    <label for="rating"> How satisfied are you?</label>
+                    <input type="hidden" name="question" value="How satisfied are you?"> 
+                    <input type="hidden" name="sentBy" value="HTML"> 
+                    <input type="number" id="rating" name="rating" min="1" max="5" value="0" required> 
+                    <button type="submit"> Submit </button>
+                </form> 
+            </feedback-widget>
 
     
             <weather-widget> 
@@ -221,6 +206,7 @@
             </weather-widget>
          
     </section>
+
 
     </main>
 
